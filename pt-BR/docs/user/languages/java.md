@@ -10,7 +10,7 @@ Este guia cobre tópicos específicos ao ambiente de build e configuração de p
 
 ## Visão Geral
 
-O ambiente do Travis CI oferece o OpenJDK 7, OpenJDK 6, Oracle JDK 7, Gradle 1.4, Maven 3 e Ant. O construtor de projetos Java possui boas configurações padrão para projetos que usem Gradle, Maven ou Ant, então provavelmente você não precisará configurar nada além de 
+O ambiente do Travis CI oferece o OpenJDK 7, OpenJDK 6, Oracle JDK 7, Gradle 1.8, Maven 3.1 e Ant 1.8. O construtor de projetos Java possui boas configurações padrão para projetos que usem Gradle, Maven ou Ant, então provavelmente você não precisará configurar nada além de 
 
     language: java
 
@@ -42,6 +42,10 @@ Se o seu projeto possui o arquivo `build.gradle` na raiz do repositório, o cons
 
     gradle check
 
+para executar a suite de teste. Se o seu projeto também incluir o script auxiliar `gradlew` na raiz do projeto, o construtor Java do Travis procurará então utilizá-lo. O comando padrão se tornará:
+
+    ./gradlew check
+
 para executar a suite de teste. Este comportamento pode ser sobrescrito conforme descrito no [guia de configuração de build](/pt_BR/docs/user/build-configuration/).
 
 ### Gerenciamento de Dependências
@@ -50,7 +54,10 @@ Antes de executar os testes, o construtor Java executará
 
     gradle assemble
 
-para instalar as dependências do seu projeto com Gradle.
+para instalar as dependências do seu projeto com Gradle. Novamente, se você incluir o script auxiliar o comando irá se tornar
+
+    ./gradlew assemble
+
 
 ## Projetos Usando Ant
 
