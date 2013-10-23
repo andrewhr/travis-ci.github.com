@@ -95,11 +95,6 @@ O Travis CI provê o OpenJDK 7, OpenJDK 6 e Oracle JDK 7. O Sun JDK 6 não é fo
 
 O JDK 7 possui compatibilidade com as versões anteriores, e nós achamos que é hora de todos os projetos começarem a serem testados no JDK 7 primeiro, e no JDK 6 apenas se os recursos permitirem.
 
-## Espelho Local do Maven
-
-O Travis CI possui um espelho local do Maven em [maven.mirrors.travis-ci.org](http://maven.mirrors.travis-ci.org/) e o `~/.m2/settings.xml` está configurado para utilizá-lo.
-
-
 ## Exemplos
 
 * [JRuby](https://github.com/jruby/jruby/blob/master/.travis.yml)
